@@ -1,0 +1,67 @@
+%fourier plots
+fs = 1;
+b_f = fftshift(fft(initial_data));
+F = -fs/2 + fs/length(initial_data):fs/length(initial_data) : fs/2  ;
+figure;
+plot(F,abs(b_f));
+legend('initial_data');
+
+fs = 1;
+b_f = fftshift(fft(pn));
+F = -fs/2 + fs/length(pn):fs/length(pn) : fs/2  ;
+figure;
+plot(F,abs(b_f));
+legend('pn');
+
+fs = 1;
+b_f = fftshift(fft(modulated2));
+F = -fs/2 + fs/length(modulated2):fs/length(modulated2) : fs/2  ;
+figure;
+plot(F,abs(b_f));
+legend('modulated2');
+
+fs = 1;
+b_f = fftshift(fft(modulated_p2));
+F = -fs/2 + fs/length(modulated2):fs/length(modulated2) : fs/2  ;
+figure;
+plot(F,abs(b_f));
+legend('modulated_p2');
+
+fs = 1;
+b_f = fftshift(fft(noised_signal2));
+F = -fs/2 + fs/length(modulated2):fs/length(modulated2) : fs/2  ;
+figure;
+plot(F,abs(b_f));
+legend('noised_signal2');
+fs = 1;
+
+fs = 1;
+b_f = fftshift(fft(pn_removed2));
+F = -fs/2 + fs/length(modulated2):fs/length(modulated2) : fs/2  ;
+figure;
+plot(F,abs(b_f));
+legend('pn_removed2');
+
+fs = 1;
+b_f = fftshift(fft(demodulated2));
+F = -fs/2 + fs/length(modulated2):fs/length(modulated2) : fs/2  ;
+figure;
+plot(F,abs(b_f));
+legend('demodulated');
+
+fs = 1;
+b_f = fftshift(fft(filtered2));
+F = -fs/2 + fs/length(modulated2):fs/length(modulated2) : fs/2  ;
+figure;
+plot(F,abs(b_f));
+legend('filtered2');
+
+fs = 1;
+b_f = fftshift(fft(data2));
+F = -fs/2 + fs/length(data2):fs/length(data2) : fs/2  ;
+figure;
+plot(F,abs(b_f));
+legend('data2');
+
+
+
